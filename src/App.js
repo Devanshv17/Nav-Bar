@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+// App.js
+
+import React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Button from '@mui/material/Button';
 import './App.css';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AppBar position="static">
+        <Toolbar>
+          {/* Logo and Options */}
+          <div className="logo-and-options">
+            <img src="Unknown.png" alt="Your Logo" className="logo" />
+            <Button color="inherit">Home</Button>
+            <Button color="inherit">Chat</Button>
+            <Button color="inherit">App</Button>
+          </div>
+
+          {/* New profile section */}
+          <div className="profile-section">
+            {/* <img src="logo512.png" alt="Profile" className="profile-picture" /> */}
+            <div className="profile-name">John Doe</div>
+          </div>
+        </Toolbar>
+      </AppBar>
+
+      {/* Other components and content */}
     </div>
   );
-}
+};
 
 export default App;
